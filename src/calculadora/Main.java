@@ -1,3 +1,5 @@
+package calculadora;
+
 import java.util.Scanner;
 
 /**
@@ -7,7 +9,7 @@ import java.util.Scanner;
  * @author Casandra
  * @version 0.0.1
  */
-public class Calculadora {
+public class Main {
 
     /**
      * Punto de entrada de la aplicación. Desde aquí se llamará al menu.

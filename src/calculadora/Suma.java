@@ -1,3 +1,5 @@
+package calculadora;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -39,7 +41,7 @@ public class Suma {
     }
 
     /**
-     * Método para mostrar el submenú de la clase Suma. Al igual que el menú principal de Calculadora, es un menú
+     * Método para mostrar el submenú de la clase calculadora.Suma. Al igual que el menú principal de Calculadora, es un menú
      * sencillo, que se llama recursivamente una vez se ejecuta alguna de las opciones salvo la de regresar al
      * menú principal.
      */
@@ -61,7 +63,7 @@ public class Suma {
                 mostrarMenu();
                 break;
             case 3:
-                Calculadora.mostrarMenu();
+                Main.mostrarMenu();
                 break;
             default:
                 mostrarMenu();
