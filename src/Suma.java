@@ -9,7 +9,6 @@ import java.util.Scanner;
  * @author Casandra
  * @version 0.0.1
  */
-
 public class Suma {
 
     /**
