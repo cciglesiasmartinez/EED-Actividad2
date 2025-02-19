@@ -39,32 +39,69 @@ public class Suma {
     }
 
     /**
+     * Método para ejecutar la suma de tres números reales
+     *
+     * @param a El primer término real a sumar
+     * @param b El segundo término real a sumar
+     * @param c El tercer término real a sumar
+     * @return Devuelve el valor resultado de sumar a, b y c
+     */
+    public static double sumar(double a, double b, double c) {
+        return a + b + c;
+    }
+
+    /**
+     * Método para ejecutar la suma con valor acumulado
+     * @param a El término real a sumar
+     * @return Devuelve el valor de la suma entre a y el valor acumulado
+     */
+    public static double sumar(double a) {
+        double resultado = a + valorAcumulado;
+        valorAcumulado = resultado;
+        return resultado;
+    }
+
+    /**
      * Método para mostrar el submenú de la clase calculadora.Suma. Al igual que el menú principal de Calculadora, es un menú
      * sencillo, que se llama recursivamente una vez se ejecuta alguna de las opciones salvo la de regresar al
      * menú principal.
      */
     public static void mostrarMenu() {
-        System.out.println("1. Sumar dos enteros");
-        System.out.println("2. Sumar dos reales");
-        System.out.println("3. Volver al menú principal");
+        System.out.println("1. Sumar dos números enteros");
+        System.out.println("2. Sumar dos números reales");
+        System.out.println("3. Sumar tres números reales");
+        System.out.println("4. Sumar con valor acumulado");
+        System.out.println("5. Volver al menú principal");
         int opcion = entradaTeclado.nextInt();
         switch(opcion) {
             case 1:
-                List<Integer> parametrosEnteros = pedirParametros(2, Integer.class);
-                System.out.println("Resultado: " + sumar(parametrosEnteros.get(0), parametrosEnteros.get(1)));
+                List<Integer> dosParametrosEnteros = pedirParametros(2, Integer.class);
+                System.out.println("Resultado: " + sumar(dosParametrosEnteros.get(0), dosParametrosEnteros.get(1)));
                 mostrarMenu();
                 break;
             case 2:
-                List<Double> parametrosReales = pedirParametros(2, Double.class);
-                System.out.println("Resultado: " + sumar(parametrosReales.get(0), parametrosReales.get(1)));
+                List<Double> dosParametrosReales = pedirParametros(2, Double.class);
+                System.out.println("Resultado: " + sumar(dosParametrosReales.get(0), dosParametrosReales.get(1)));
                 mostrarMenu();
                 break;
             case 3:
+                List<Double> tresParametrosReales = pedirParametros(3, Double.class);
+                System.out.println("Resultado: " + sumar(
+                        tresParametrosReales.get(0),tresParametrosReales.get(1),tresParametrosReales.get(2)));
+                mostrarMenu();
+                break;
+            case 4:
+                List<Double> unParametroReal = pedirParametros(1, Double.class);
+                System.out.println("Resultado: "+ sumar(unParametroReal.get(0)));
+                mostrarMenu();
+                break;
+            case 5:
                 Main.mostrarMenu();
                 break;
             default:
                 System.out.println("Opción no disponible.");
                 mostrarMenu();
+                break;
         }
     }
 
