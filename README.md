@@ -15,7 +15,7 @@ Repositorio para Actividad 2 de la asignatura "Entornos de Desarrollo" (Javadoc 
 
 ## Notas sobre los tests
 * Hay que buscar una convención para los nombres. Al final de este documento figuran algunos tests para cada clase con su nombre correspondiente, aunque sería interesante discutir y buscar alternativas mejores.
-* Cuando empleemos tests sencillos (@Test) podemos usar la estructura "GIVEN-THEN-WHEN" en el cuerpo del test. Por ejemplo:
+* Cuando empleemos tests sencillos (@Test) podemos usar la estructura "GIVEN-WHEN-THEN" en el cuerpo del test. Por ejemplo:
 ```
   @Test
   void sumar_dosEnteros_deberiaFuncionar() {
@@ -24,10 +24,10 @@ Repositorio para Actividad 2 de la asignatura "Entornos de Desarrollo" (Javadoc 
     int b = 2;
     int resultadoEsperado = 7;
     
-    // Entonces (then)
+    // Cuando (when)
     int resultadoActual = Suma.sumar(a,b);
     
-    // Cuando (when)
+    // Entonces (then)
     assertEquals(resultadoEsperado,resultadoActual);
   }
 ```
