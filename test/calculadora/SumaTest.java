@@ -1,6 +1,5 @@
 package calculadora;
 
-import calculadora.Suma;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -15,9 +14,9 @@ class SumaTest {
             "-5,-5,-10"
     })
     void sumar_dosEnteros_deberiaFuncionar(int a, int b, int resultadoEsperado) {
-        // THEN
+        // Cuando
         int resultadoActual = Suma.sumar(a,b);
-        // WHEN
+        // Entonces
         assertEquals(resultadoEsperado, resultadoActual);
     }
 
