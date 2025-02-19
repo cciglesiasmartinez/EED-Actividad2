@@ -3,7 +3,7 @@ Repositorio para Actividad 2 de la asignatura "Entornos de Desarrollo" (Javadoc 
 
 ## Notas sobre el código
 * ¿Utilizamos la sobrecarga de métodos? Me parece bastante apropiado para la mayoría de clases, puesto que muchas comparten un mismo método con diferente firma (suma de dos reales, suma de dos enteros, etcétera), por lo que podemos emplear un mismo método "sumar" sobrecargado para realizar todas las operaciones pedidas.
-* Llamaremos "Calculadora" a la clase "Main" a la que se referencia en el enunciado. Esta será el punto de entrada del código (método public static void main). Esta clase tendrá un sólo método "mostrarMenu" que redirigirá a métodos "mostrarMenu" de cada una de las clases de operación (Suma, Resta, etc). De este modo, tendremos una suerte de "menú principal" con submenús que implementará cada uno en su propia clase. Es importante que estos submenús (por ejemplo, Suma.mostrarMenu()) ofrezcan la posibilidad de volver al menú principal (Calculadora.mostrarMenu()).
+* La clase "Main" será el punto de entrada del código (método public static void main). Esta clase tendrá un sólo método "mostrarMenu" que redirigirá a métodos "mostrarMenu" de cada una de las clases de operación (Suma, Resta, etc). De este modo, tendremos una suerte de "menú principal" con submenús que implementará cada uno en su propia clase. Es importante que estos submenús (por ejemplo, Suma.mostrarMenu()) ofrezcan la posibilidad de volver al menú principal (Main.mostrarMenu()).
 * Siempre que sea posible, evitar código repetitivo.
 * Máximo ancho de línea: 140 carácteres.
 ### Algunas convenciones sobre nombres...
@@ -65,7 +65,7 @@ He añadido algunas sugerencias y guías para el código del proyecto en el fich
 
 ## Sugerencia para la estructura general del programa
 Esto es una sugerencia que nos puede servir como modelo inicial a seguir para estructurar el programa. Incluye clases, atributos y firmas de los métodos.
-### Clase Calculadora
+### Clase Main
 ```
 public static void main(String args[])
 public static void mostrarMenu()
