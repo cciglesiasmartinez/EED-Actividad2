@@ -11,6 +11,8 @@ import java.util.Scanner;
  */
 public class Main {
 
+    private static final Scanner entradaTeclado = new Scanner(System.in);
+
     /**
      * Punto de entrada de la aplicación. Desde aquí se llamará al menu.
      *
@@ -27,17 +29,22 @@ public class Main {
      * clases. Además ofrece una opción para salir de la aplicación.
      */
     public static void mostrarMenu() {
-        System.out.println("Bienvenido a la Calculadora");
+        System.out.println("Menú principal:");
         System.out.println("1. Ejecutar una suma");
         System.out.println("2. Salir");
-        Scanner entradaTexto = new Scanner(System.in);
-        int opcion = entradaTexto.nextInt();
+        System.out.println("Escoja una opción...");
+        int opcion = entradaTeclado.nextInt();
         switch (opcion) {
             case 1:
                 Suma.mostrarMenu();
                 break;
             case 2:
                 System.exit(0);
+                break;
+            default:
+                System.out.println("Opción no disponbile.");
+                mostrarMenu();
+                break;
         }
     }
 }

@@ -13,10 +13,8 @@ import java.util.Scanner;
  */
 public class Suma {
 
-    /**
-     * Atributo destinado a acumular valores para la ejecución del método sumar con valor acumulado.
-     */
     private static double valorAcumulado;
+    private static final Scanner entradaTeclado = new Scanner(System.in);
 
     /**
      * Método para ejecutar la suma de dos números enteros.
@@ -49,16 +47,15 @@ public class Suma {
         System.out.println("1. Sumar dos enteros");
         System.out.println("2. Sumar dos reales");
         System.out.println("3. Volver al menú principal");
-        Scanner entradaTeclado = new Scanner(System.in);
         int opcion = entradaTeclado.nextInt();
         switch(opcion) {
             case 1:
-                List<Integer> parametrosEnteros = pedirParametros(entradaTeclado, 2, Integer.class);
+                List<Integer> parametrosEnteros = pedirParametros(2, Integer.class);
                 System.out.println("Resultado: " + sumar(parametrosEnteros.get(0), parametrosEnteros.get(1)));
                 mostrarMenu();
                 break;
             case 2:
-                List<Double> parametrosReales = pedirParametros(entradaTeclado, 2, Double.class);
+                List<Double> parametrosReales = pedirParametros(2, Double.class);
                 System.out.println("Resultado: " + sumar(parametrosReales.get(0), parametrosReales.get(1)));
                 mostrarMenu();
                 break;
@@ -66,6 +63,7 @@ public class Suma {
                 Main.mostrarMenu();
                 break;
             default:
+                System.out.println("Opción no disponible.");
                 mostrarMenu();
         }
     }
@@ -76,24 +74,23 @@ public class Suma {
      * de evitar código repetitivo en el menú provisto por el método mostrarMenu de esta misma clase. La clave de
      * este método es emplear un tipo genérico <TipoNumerico> que extiende la clase Number.
      *
-     * @param entrada Objeto de tipo Scanner que capturará los valores introducidos via teclado.
      * @param numeroParametros El número de parámetros a solicitar.
      * @param tipo El tipo de los parámetros solicitados (Integer o Double).
      * @return Devuelve un ArrayList según el tipo especificado en el parámetro tipo.
      * @param <TipoNumerico> Tipo genérico que extiende la clase Number, para englobar valores Integer y Double.
      */
     private static <TipoNumerico extends Number> List<TipoNumerico> pedirParametros(
-            Scanner entrada, int numeroParametros, Class<TipoNumerico> tipo) {
+            int numeroParametros, Class<TipoNumerico> tipo) {
         List<TipoNumerico> parametros = new ArrayList<TipoNumerico>();
         for (int i = 1; i<= numeroParametros; i++) {
             if (tipo == Double.class) {
                 System.out.println("Introduce un número real: ");
-                Double parametro = entrada.nextDouble();
+                Double parametro = entradaTeclado.nextDouble();
                 parametros.add(tipo.cast(parametro));
             }
             if (tipo == Integer.class) {
                 System.out.println("Introduce un número entero: ");
-                Integer parametro = entrada.nextInt();
+                Integer parametro = entradaTeclado.nextInt();
                 parametros.add(tipo.cast(parametro));
             }
         }
