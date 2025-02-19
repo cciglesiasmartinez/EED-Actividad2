@@ -81,7 +81,6 @@ public class Suma {
      * @return Devuelve un ArrayList según el tipo especificado en el parámetro tipo.
      * @param <TipoNumerico> Tipo genérico que extiende la clase Number, para englobar valores Integer y Double.
      */
-
     private static <TipoNumerico extends Number> List<TipoNumerico> pedirParametros(
             Scanner entrada, int numeroParametros, Class<TipoNumerico> tipo) {
         List<TipoNumerico> parametros = new ArrayList<TipoNumerico>();
