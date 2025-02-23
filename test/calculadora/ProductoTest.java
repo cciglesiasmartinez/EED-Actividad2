@@ -6,9 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 /**
  * Clase que contiene las pruebas unitarias para la clase Producto.
  *
- * @author [Tu Nombre]
- * @author [Tu Perfil de GitHub]
- * @version 1.0
+ * @author JC
+ * @version 0.0.1
  */
 class ProductoTest {
 

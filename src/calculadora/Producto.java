@@ -7,9 +7,8 @@ import java.util.Scanner;
 /**
  * Clase que implementa las operaciones de multiplicación y potencia para la calculadora.
  *
- * @author [Tu Nombre]
- * @author [Tu Perfil de GitHub]
- * @version 1.0
+ * @author JC
+ * @version 0.0.1
  */
 public class Producto {
 

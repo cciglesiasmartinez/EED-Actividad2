@@ -27,7 +27,7 @@ public class Main {
             case 1:
                 Suma.mostrarMenu();
                 break;
-            case 2: // Nueva opción
+            case 2:
                 Producto.mostrarMenu();
                 break;
             case 3:
