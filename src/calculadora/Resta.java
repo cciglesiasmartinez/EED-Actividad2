@@ -25,6 +25,42 @@ public class Resta {
     public static int restar(int a, int b) {
         return a - b;
     }
+
+    /**
+     * Ejecuta la resta de dos términos reales.
+     *
+     * @param a Primer parámetro de la resta
+     * @param b Segundo parámetro de la resta
+     * @return Devuelve el resultado de restar a y b
+     */
+    public static double restar(double a, double b) {
+        return a - b;
+    }
+
+    /**
+     * Realiza la resta de tres números reales.
+     *
+     * @param a Primer parámetro de la resta
+     * @param b Segundo parámetro de la resta
+     * @param c Tercer parámetro de la resta
+     * @return Devuelve resultado de restar a, b y c
+     */
+    public static double restar(double a, double b, double c) {
+        return a - b - c;
+    }
+
+    /**
+     * Resta con valor acumulado.
+     *
+     * @param a Parámetro a restar del valor acumulado
+     * @return Devuelve el valor de la resta entre a y el valor acumulado
+     */
+    public static double restar(double a) {
+        double resultado = a - valorAcumulado;
+        valorAcumulado = resultado;
+        return resultado;
+    }
+
     /**
      * Método para mostrar el submenú de la clase calculadora.Suma. Al igual que el menú principal de Calculadora,
      * es un menú sencillo, que se llama recursivamente una vez se ejecuta alguna de las opciones salvo la de regresar
