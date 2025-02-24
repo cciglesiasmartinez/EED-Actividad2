@@ -79,6 +79,22 @@ public class Resta {
                 System.out.println("Resultado: " + restar(dosParametrosEnteros.get(0), dosParametrosEnteros.get(1)));
                 mostrarMenu();
                 break;
+            case 2:
+                List<Double> dosParametrosReales = pedirParametros(2, Double.class);
+                System.out.println("Resultado: " + restar(dosParametrosReales.get(0), dosParametrosReales.get(1)));
+                mostrarMenu();
+                break;
+            case 3:
+                List<Double> tresParametrosReales = pedirParametros(3, Double.class);
+                System.out.println("Resultado: " + restar(
+                        tresParametrosReales.get(0),tresParametrosReales.get(1),tresParametrosReales.get(2)));
+                mostrarMenu();
+                break;
+            case 4:
+                List<Double> unParametroReal = pedirParametros(1, Double.class);
+                System.out.println("Resultado: " + restar(unParametroReal.get(0)));
+                mostrarMenu();
+                break;
             case 5:
                 Main.mostrarMenu();
                 break;
