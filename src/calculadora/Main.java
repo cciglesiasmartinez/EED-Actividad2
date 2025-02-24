@@ -20,8 +20,9 @@ public class Main {
         System.out.println("Menú principal:");
         System.out.println("1. Ejecutar una suma");
         System.out.println("2. Ejecutar un producto");
-        System.out.println("4. Ejecutar una resta");
-        System.out.println("3. Salir");
+        System.out.println("3. Ejecutar una resta");
+        System.out.println("4. Cociente");
+        System.out.println("5. Salir");
         System.out.println("Escoja una opción...");
         int opcion = entradaTeclado.nextInt();
         switch (opcion) {
@@ -32,15 +33,17 @@ public class Main {
                 Producto.mostrarMenu();
                 break;
             case 3:
-                Producto.mostrarMenu();
+                Resta.mostrarMenu();
                 break;
             case 4:
-                Resta.mostrarMenu();
+                Cociente.mostrarMenu();
+                break;
+            case 5:
+                System.exit(0);
                 break;
             default:
                 System.out.println("Opción no disponible.");
                 mostrarMenu();
                 break;
-        }
     }
 }
