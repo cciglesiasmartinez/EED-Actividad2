@@ -27,6 +27,26 @@ public class Cociente {
             throw new ArithmeticException("No se puede dividir entre cero");
         }
         return a / b;
+
+    }
+    /**
+     * Inverso de un número real.
+     *
+     * @param a Término del cual se ha de calcular el inverso.
+     * @return El inverso del parámetro.
+     */
+    public static double calcularInverso(double a) {
+        return 1/a;
+    }
+
+    /**
+     * Raíz cuadrada de un número real.
+     *
+     * @param a Término del cual se ha de calcular la raíz cuadrada.
+     * @return La raíz cuadrada del parámetro.
+     */
+    public static double calcularRaizCuadrada(double a) {
+        return Math.sqrt(a);
     }
 
     /**
@@ -43,6 +63,7 @@ public class Cociente {
         }
         return a / b;
     }
+
     /**
      * Método para mostrar el submenú de la clase calculadora.Suma. Al igual que el menú principal de Calculadora,
      * es un menú sencillo, que se llama recursivamente una vez se ejecuta alguna de las opciones salvo la de regresar
@@ -64,6 +85,16 @@ public class Cociente {
             case 2:
                 List<Double> dosParametrosReales = pedirParametros(2, Double.class);
                 System.out.println("Resultado: " + dividir(dosParametrosReales.get(0), dosParametrosReales.get(1)));
+                mostrarMenu();
+                break;
+            case 3:
+                List<Double> unParametroRealInverso = pedirParametros(1, Double.class);
+                System.out.println("Resultado: " + calcularInverso(unParametroRealInverso.get(0)));
+                mostrarMenu();
+                break;
+            case 4:
+                List<Double> unParametroRealRaiz = pedirParametros(1, Double.class);
+                System.out.println("Resultado: " + calcularRaizCuadrada(unParametroRealRaiz.get(0)));
                 mostrarMenu();
                 break;
             case 5:
