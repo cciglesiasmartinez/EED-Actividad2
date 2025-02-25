@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 /**
  * Esta clase contiene las operaciones de tipo suma. Es una clase compuesta por un único atributo privado estático y
- * por métodos públicos estáticos pensados para ser accedidos
+ * por métodos públicos estáticos pensados para ser accedidos desde cualquier paquete externo.
  *
  * @author Casandra
  * @version 0.0.1
@@ -22,8 +22,15 @@ public class Suma {
      * @param a El primer término a sumar
      * @param b El segundo término a sumar
      * @return Devuelve el valor resultado de sumar a y b
+     * @throws ArithmeticException Lanza una excepción si los valores exceden la capacidad de int.
      */
     public static int sumar(int a, int b) {
+        if ((a + b < a || a + b < b) && (a > 0 && b > 0)) {
+            throw new ArithmeticException("Número fuera de los límites de int (demasiado grande)");
+        }
+        if ((a + b > a || a + b > b) && (a < 0 && b < 0)) {
+            throw new ArithmeticException("Número fuera de los límites de int (demasiado pequeño)");
+        }
         return a + b;
     }
 
