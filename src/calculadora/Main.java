@@ -3,19 +3,32 @@ package calculadora;
 import java.util.Scanner;
 
 /**
- * Este es el punto de entrada del programa.
+ * Esta clase contiene el punto de entrada del programa así como el menú principal.
+ *
  * @author Casandra
  * @author JC
+ * @author Sandra
+ * @author Mario
+ * @author Carlos
  * @version 0.0.2
  */
 public class Main {
 
     private static final Scanner entradaTeclado = new Scanner(System.in);
 
+    /**
+     * Este método es el punto de entrada del programa.
+     *
+     * @param args No se esperan argumentos de ejecución.
+     */
     public static void main(String[] args) {
         mostrarMenu();
     }
 
+    /**
+     * Este método contiene el menú principal de la aplicación. Cada opción de este menú conduce a un submenú ubicado en
+     * una de las clases que conforman esta aplicación.
+     */
     public static void mostrarMenu() {
         System.out.println("Menú principal:");
         System.out.println("1. Ejecutar una suma");
