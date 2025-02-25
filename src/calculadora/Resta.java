@@ -21,8 +21,12 @@ public class Resta {
      * @param a Primer parámetro de la resta
      * @param b Segundo parámetro de la resta
      * @return Devuelve el resultado de restar a y b
+     * @throws ArithmeticException Lanza una excepción si el resultado excede los límites de int
      */
     public static int restar(int a, int b) {
+        if ((a - b > a || a - b > b) && ( a < 0 || b < 0)) {
+            throw new ArithmeticException("Número fuera de los límites de int (demasiado pequeño)");
+        }
         return a - b;
     }
 
