@@ -22,13 +22,17 @@ class SumaTest {
 
     @ParameterizedTest
     @CsvSource({
-            "2147483647, 1, 2147483648" // Test para números grandes (límite de int)
+            "2147483647, 1, ArithmeticException", // Test para números grandes (límite de int)
+            "2147483647, 2, ArithmeticException",
+            "-2147483647,-2147483647, ArithmeticException"
+
     })
-    void sumar_dosEnterosGrandes_deberiaFuncionar(long a, long b, long resultadoEsperado) {
+    void sumar_dosEnterosGrandes_deberiaLanzarExcepcion(long a, long b, String excepcionEsperada) {
         // Cuando
-        long resultadoActual = (long) Suma.sumar((int) a, (int) b); // Convertimos a int para usar el método sumar existente
-        // Entonces
-        assertEquals(resultadoEsperado, resultadoActual);
+        if (excepcionEsperada.equals("ArithmeticException")) {
+            // Entonces
+            assertThrows(ArithmeticException.class, () -> Suma.sumar((int) a, (int) b));
+        }
     }
 
     @ParameterizedTest
