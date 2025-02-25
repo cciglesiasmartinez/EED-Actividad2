@@ -45,5 +45,6 @@ public class Main {
                 System.out.println("Opción no disponible.");
                 mostrarMenu();
                 break;
+        }
     }
 }
